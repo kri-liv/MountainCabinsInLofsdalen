@@ -41,10 +41,10 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="acommodation.html">Acommodation</a>
+                        <a class="nav-link" href="accommodation.html">Accommodation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="activitites.html">Activities</a>
+                        <a class="nav-link active" href="activities.html">Activities</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="book.html">Book</a>
@@ -59,9 +59,31 @@
 
 
 
+<div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="card">
+                  <div class="card-body">
+                     <p> Welcome to Lofsdalen! 
+                    Here is everything you need for a lovely holiday both in the summertime and in the wintertime!
+                    In the map below you find  activities and adventures that Lofsdalen have to offer.
+            
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="map"> </div>
+      </div>
+    <script>
 
-2 km to the ski resort. Lofsdalen is located high and snow-sure. In the lift system, there are 25 slopes of all levels of difficulty and one of Sweden's largest drop heights of about 500 m.
+      function initMap() {
 
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: -28.024, lng: 140.887}
+        });
+    </script>
 
            <!-- Bootstrap JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -74,6 +96,8 @@
         <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>        
+    <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhVQBYTEiLoAcgSFjv16H_Iz5WZfySAEo&callback=initMap"></script>
     </body>
 </html>
